@@ -47,3 +47,12 @@
     padding: 16px 52px;
   }
 }
+
+@media (min-width: 1000px) {
+  .search-form {
+    max-width: 608px;
+  }
+  .search-form__input{
+    width: 608px;
+  }
+}
