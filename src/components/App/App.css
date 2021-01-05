@@ -3,4 +3,6 @@
   font-family: 'Inter', 'Roboto', Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0 auto;
+  min-width: 320px;
+  max-width: 1440px;
 }

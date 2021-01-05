@@ -1,0 +1,28 @@
+.search-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.search-form__input {
+  background-color: #fff;
+  border: 1px solid #d1d2d6;
+  box-sizing: border-box;
+  backdrop-filter: blur(100px);
+  border-radius: 100px;
+  min-width: 288px;
+  padding: 16px;
+}
+
+.search-form__submit-btn {
+  background-color: #2F71E5;
+  border: 1px rgba(14, 26, 57, 0.2);
+  box-sizing: border-box;
+  backdrop-filter: blur(100px);
+  border-radius: 100px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 18px;
+  padding: 16px 116px;
+  margin-top: 16px;
+}

@@ -1,15 +1,24 @@
 .header {
   padding: 0;
-  background: url(../../images/header-background.jpg);
+  background: url(../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.jpg);
   background-repeat: no-repeat;
-  
+  background-size: cover;
+  padding: 16px;
 }
 
 .header__title {
   color: #fff;
-  font-family: Roboto-Slab;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 16px;
-  margin: 0;
+  font-family: "Roboto-Slab";
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 40px;
+}
+
+.header__subtitle {
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+  padding-bottom: 122px;
 }

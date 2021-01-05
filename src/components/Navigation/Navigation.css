@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  color: #fff;
+  font-family: Roboto-Slab;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.navbar_hamburger {
+  background: url(../../images/menu.svg);
+  width: 24px;
+  height: 24px;
+  padding: 16px;
+}
+
