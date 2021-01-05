@@ -11,10 +11,16 @@
   margin: 0;
 }
 
-.navbar_hamburger {
+.navbar__hamburger {
   background: url(../../images/menu.svg);
   width: 24px;
   height: 24px;
-  padding: 16px;
+  border: none;
+}
+
+@media (min-width: 481px) {
+ .navbar {
+  padding: 22px 40px;
+ }
 }
 

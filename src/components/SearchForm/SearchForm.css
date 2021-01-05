@@ -26,3 +26,24 @@
   padding: 16px 116px;
   margin-top: 16px;
 }
+
+@media (min-width: 481px) {
+  .search-form {
+   max-width: 448px;
+   flex-direction: row;
+   margin: 0 auto;
+  }
+
+  .search-form__input {
+    width: 448px;
+    position: relative;
+  }
+
+  .search-form__submit-btn {
+    position: relative;
+    margin-top: 0;
+    margin-left: -160px;
+    width: 160px;
+    padding: 16px 52px;
+  }
+}
