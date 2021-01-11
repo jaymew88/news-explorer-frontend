@@ -1,5 +1,6 @@
 import React from 'react';
 import './SearchForm.css';
+import '../App/App.css';
 
 function SearchForm() {
 
