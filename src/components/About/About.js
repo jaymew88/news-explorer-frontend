@@ -2,7 +2,6 @@ import React from 'react';
 import './About.css';
 import authorPic from '../../images/author.jpg'
 
-
 function About () {
 
   return (

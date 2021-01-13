@@ -3,7 +3,6 @@
   margin: 0 auto;
   flex-direction: row;
   max-width: 608px;
-  padding-bottom: 80px;
 }
 
 .search-form__input {
@@ -55,7 +54,7 @@
 
  @media screen and (max-width: 500px) {
   .search-form {
-    padding: 0 16px 32px;
+    padding: 0 16px;
   }
  }
 }

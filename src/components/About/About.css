@@ -1,6 +1,8 @@
 .about {
   display: flex;
   padding: 80px 100px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about__pic {

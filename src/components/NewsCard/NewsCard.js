@@ -1,9 +1,7 @@
 import React from 'react';
 import './NewsCard.css';
 
-function NewsCard({ 
-  date, title, text, source, image
-}) {
+function NewsCard({ date, title, text, source, image }) {
   return (
     <li className="card">
       <img className="card__img" src={image} alt={title} />
@@ -15,4 +13,4 @@ function NewsCard({
   )
 }
 
-export default NewsCard
+export default NewsCard;

@@ -1,16 +1,16 @@
 import React from 'react';
 import NewsCard from '../NewsCard/NewsCard';
-import './NewsCardList.css'
+import './NewsCardList.css';
 
-function NewsCardList({ cards }) {
+function NewsCardList(props) {
   return (
     <section className="cards">
       <h2 className="cards__title">Search Results</h2>
-      <div className="cards__container">
         <ul className="cards__list">
-          {cards.map((card, index) => (
+          {props.cards.map((card, index) => (
             <NewsCard 
               key={index}
+              keyword={card.keyword}
               date={card.date}
               title={card.title}
               text={card.text}
@@ -20,10 +20,10 @@ function NewsCardList({ cards }) {
             )
           )}
         </ul>
-        <button className="cards__more-btn">Show More</button>
-      </div>
+      <button className="cards__more-btn">Show More</button>
     </section>
   )
 }
 
-export default NewsCardList
+export default NewsCardList;
+

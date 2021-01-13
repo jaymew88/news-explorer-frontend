@@ -45,3 +45,34 @@
   text-transform: uppercase;
   margin: 0 24px 24px;
 }
+
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 288px;
+    height: 452px;
+  }
+  .card__img {
+    height: 196px; 
+  }
+  .card__date {
+    font-size: 18px;
+    margin: 16px 0 12px 18px;
+  }
+  .card__title {
+    font-size: 22px;
+    margin: auto;
+    width: 256px;
+    height: 48px;
+    text-overflow: ellipsis;
+    text-overflow: hidden;
+  }
+  .card__text{
+    margin: 10px 18px 12px;
+    height: 88px;
+    overflow: hidden; 
+    word-wrap: break-word;
+  }
+  .card__source{
+    margin: 0 18px 16px;
+  }
+}

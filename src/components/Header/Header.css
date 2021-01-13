@@ -1,51 +1,53 @@
 .header {
-  max-width: 608px;
-  color: #fff;
-  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  background: url('../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.jpg') no-repeat center;
+  background-size: cover;
+  padding-bottom: 80px;
 }
 
 .header__title {
-  font-family: 'Roboto Slab', serif;
+  max-width: 608px;
+  color: #fff;
+  margin: 80px auto 32px;
+  font-family: 'Roboto Slab', sans-serif;
   font-size: 60px;
+  font-weight: 400;
   line-height: 64px;
-  margin: 80px 0 32px;
 }
 
 .header__subtitle {
-  font-size: 18px;
+  max-width: 608px;
+  color: #fff;
+  margin: 0 auto 88px;
+  font-size: 18x;
   font-weight: 400;
   line-height: 24px;
-  margin-bottom: 32px;
-
 }
 
-@media screen and (max-width: 1000px) {
-  .header {
-    max-width: 452px;
-  }
+@media screen and (max-width: 1024px) {
   .header__title {
+    max-width: 448px;
     font-size: 36px;
     line-height: 40px;
-    margin: 38px 0 16px;  
+    margin: 38px auto 16px;
   }
   .header__subtitle {
+    max-width: 448px;
     font-size: 18px;
     line-height: 24px;
-    margin: 0 0 48px;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .header__title {
-    margin-top: 30px;
-  }
-  .header__subtitle {
-    margin-bottom: 122px;
+    margin: 0 auto 48px;
   }
 
-  @media screen and (max-width: 500px) {
-    .header {
-      padding: 0 16px;
+  @media screen and (max-width: 720px) {
+    .header__title {
+      max-width: 288px;
+      margin-top: 30px;
+    }
+    .header__subtitle {
+      max-width: 288px;
+      margin-bottom: 122px;
     }
   }
 }
+

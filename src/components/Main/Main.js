@@ -1,16 +1,17 @@
 import React from 'react';
-import Header from '../Header/Header';
-import Navigation from '../Navigation/Navigation';
-import SearchForm from '../SearchForm/SearchForm';
+import About from '../About/About';
+import NewsCardList from '../NewsCardList/NewsCardList';
+import Preloader from '../Preloader/Preloader';
 import './Main.css'
 
-
-function Main ({ handlePopup, user, isOpen }) {
+function Main (props) {
   return (
     <main className="main">
-        <Navigation handlePopup={handlePopup} user={user} isOpen={isOpen} />
-        <Header />
-        <SearchForm />
+      <Preloader loading={props.loading} results={props.results }/> 
+      {!props.loading && props.results &&
+        <NewsCardList cards={props.cards} />
+      }    
+      <About />
     </main>
   )
 }

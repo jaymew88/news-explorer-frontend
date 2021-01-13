@@ -4,16 +4,15 @@ import {
   Switch,
 } from 'react-router-dom';
 import './App.css';
+import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
-import About from '../About/About';
-import Preloader from '../Preloader/Preloader';
-import NewsCardList from '../NewsCardList/NewsCardList';
 // import SavedNews from '../SavedNews/SavedNews';
 // import SavedNewsHeader from '../SavedNewsHeader/SavedNewsHeader';
 
 function App() {
-  const [cards, setCards] = useState([{
+  const [cards, setCards] = useState([
+  {
     keyword: 'Nature',
     title: 'Everyone Needs a Special \'Sit Spot\' in Nature',
     text: 'We all know how good nature can make us feel. We have known it for millennia: the sound of the ocean, the scents of a forest, the way dappled sunlight dances through leaves.',
@@ -60,16 +59,13 @@ function App() {
   },
   ]);
 
-
   return (
     <>
       <div className='page'>
         <Switch>
           <Route path='/'>
-            <Main />
-            <NewsCardList cards={cards} />
-            {/* <Preloader loading={false}/> */}
-            <About />
+            <Header  />
+            <Main cards={cards} loading={false} results={true} />
             <Footer />
           </Route>
         </Switch>
