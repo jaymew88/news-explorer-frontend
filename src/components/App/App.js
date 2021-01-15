@@ -6,11 +6,13 @@ import {
 import './App.css';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
+import About from '../About/About';
 import Footer from '../Footer/Footer';
-// import SavedNews from '../SavedNews/SavedNews';
-// import SavedNewsHeader from '../SavedNewsHeader/SavedNewsHeader';
+import SavedNewsHeader from '../SavedNewsHeader/SavedNewsHeader';
+import SavedNews from '../SavedNews/SavedNews';
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
   const [cards, setCards] = useState([
   {
     keyword: 'Nature',
@@ -63,11 +65,19 @@ function App() {
     <>
       <div className='page'>
         <Switch>
-          <Route path='/'>
-            <Header  />
-            <Main cards={cards} loading={false} results={true} />
+        <Route path='/saved-news'>
+            <SavedNewsHeader loggedIn={loggedIn}  />
+            <SavedNews cards={cards} loggedIn={true} />
+            <About />
             <Footer />
           </Route>
+          <Route path='/'>
+            <Header  />
+            <Main cards={cards} loggedIn={loggedIn} loading={false} results={true} />
+            <About />
+            <Footer />
+          </Route>
+          
         </Switch>
       </div>
     </>

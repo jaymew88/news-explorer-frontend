@@ -5,6 +5,66 @@
   margin: 8px 8px;
 }
 
+.card__btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  height: 40px;
+  width: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../../images/bookmark.svg');
+  border: none;
+  z-index: 2;
+}
+
+.card__btn:hover {
+  background-image: url('../../images/bookmark-hover.svg');
+}
+
+.card__btn_saved {
+  background-image: url('../../images/bookmark-saved.svg');
+}
+
+.card__save {
+  position: absolute;
+  top: 24px;
+  right: 70px;
+  color: #000;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 8px 20px;
+  margin: 0;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.card__keyword {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  padding: 8px 20px;
+  margin: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  z-index: 1;
+  display: none;
+}
+
 .card__img {
   position: relative;
   height: 272px;
@@ -64,6 +124,18 @@
   .card {
     height: 452px;
   }
+  .card__btn {
+    top: 8px;
+    right: 8px
+  }
+  .card__save {
+    top: 8px;
+    right: 54px;
+  }
+  .card__keyword {
+    top: 8px;
+    left: 8px;
+  }
   .card__img {
     height: 196px; 
   }
@@ -81,5 +153,20 @@
   }
   .card__source{
     margin: 0 18px 16px;
+  }
+}
+
+@media screen and  (max-width: 720px) {
+  .card__keyword {
+    top: 16px;
+    left: 16px;
+  }
+  .card__btn {
+    top: 16px;
+    right: 16px;
+  }
+  .card__save {
+    top: 16px;
+    right: 60px;
   }
 }
