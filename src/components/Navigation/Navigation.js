@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navigation.css';
+import logout from '../../images/logout.svg';
 
 function Navigation({ isSavedNews, loggedIn }) {
   const [mobile, SetMobile] = useState(window.innerWidth < 701);
@@ -44,7 +45,11 @@ function Navigation({ isSavedNews, loggedIn }) {
                 Saved Articles
             </NavLink>
           }
-           <button className="navbar__menu-button" type="button">Sign in</button>
+          {loggedIn ?
+            <button className="navbar__menu-button" type="button">Logout</button>
+           :
+            <button className='navbar__menu-button'>Sign in</button>
+          }
          </div>
        </>
       ) : (
@@ -63,7 +68,11 @@ function Navigation({ isSavedNews, loggedIn }) {
                   Saved Articles
               </NavLink>
             }
-            <button className={`navbar__menu-button ${isSavedNews ? "navbar__menu-button_saved" : ""}`} type="button">Sign in</button>
+            {loggedIn ?
+             <button className={`navbar__menu-button ${isSavedNews ? "navbar__menu-button_saved" : ""}`} type="button">Jayme <img className="navbar__logout" src={logout} /></button>
+            :
+              <button className="navbar__menu-button">Sign in</button>
+            }
           </div>
        </>
       )}

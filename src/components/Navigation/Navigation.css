@@ -64,6 +64,12 @@
   color: #1A1B22;
   border: 1px solid #1A1B22;
   border-radius: 100px;
+  padding: 16px 16px;
+  align-content: center;
+}
+
+.navbar__logout {
+  padding-left: 20px;
 }
 
 .navbar__mobile-menu {
@@ -83,6 +89,9 @@
  .navbar__menu-button {
     padding: 10px 50px;
     margin-left: 16px;
+ }
+ .navbar__menu-button_saved {
+   padding: 16px 16px;
  }
 }
 
