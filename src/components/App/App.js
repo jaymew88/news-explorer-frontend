@@ -66,7 +66,7 @@ function App() {
       <div className='page'>
         <Switch>
         <Route path='/saved-news'>
-            <SavedNewsHeader loggedIn={loggedIn}  />
+            <SavedNewsHeader loggedIn={true}  />
             <SavedNews cards={cards} loggedIn={true} />
             <About />
             <Footer />

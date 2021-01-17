@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import './NewsCard.css';
 
-function NewsCard({ date, title, text, source, image, keyword, isSavedNews }) {
+function NewsCard({ date, title, text, source, image, keyword, loggedIn, isSavedNews, marked}) {
   const [isShown, setIsShown] = useState(false);
 
   return (
     <li className="card">
       <button 
         type="button" 
-        className="card__btn" 
+        className={`card__btn ${isSavedNews ? 'card__btn_delete' : ''} `}
         onMouseEnter={() => setIsShown(true)} 
         onMouseLeave={() => setIsShown(false)} 
       />
-      {isShown && (    
-       <p className="card__save">Sign in to save article
-         {/* {isSavedNews ? "Remove from saved" : "Sign in to save article"} */}
+      {(isShown && !loggedIn && !marked) && (    
+       <p className="card__save">
+          {isSavedNews ? "Remove from saved" : "Sign in to save article"}
        </p>
       )}
       <p className="card__keyword">{keyword}</p>

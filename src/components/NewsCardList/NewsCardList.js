@@ -15,6 +15,8 @@ function NewsCardList(props) {
               text={card.text}
               source={card.source}
               image={card.image}
+              isSavedNews={props.isSavedNews}
+              marked={props.marked}
             />
             )
           )}

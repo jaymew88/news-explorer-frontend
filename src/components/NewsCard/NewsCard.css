@@ -19,7 +19,7 @@
   background-repeat: no-repeat;
   background-image: url('../../images/bookmark.svg');
   border: none;
-  z-index: 2;
+  z-index: 1;
 }
 
 .card__btn:hover {
@@ -28,6 +28,14 @@
 
 .card__btn_saved {
   background-image: url('../../images/bookmark-saved.svg');
+}
+
+.card__btn_delete {
+  background-image: url('../../images/trash.svg');
+}
+
+.card__btn_delete:hover {
+  background-image: url('../../images/trash-hover.svg');
 }
 
 .card__save {
