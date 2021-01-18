@@ -1,16 +1,21 @@
-import React from 'react'
+import React from 'react';
+import './SuccessPopup.css';
+import PopupWithForm from '../PopupWithForm/PopupWithForm';
 
-function SuccessPopup() {
+function SuccessPopup({ isOpen, onClose, onSubmit, onSigninClick }) {
   return (
-    <PopupWithForm 
-    name="signup" 
-    title="Sign up"
-    submitButtonText="Sign in"
-    isOpen={props.isOpen}
-  >
-
-  </PopupWithForm>
+   <PopupWithForm 
+    name="success"
+    title="Registration successfully completed!"
+    isOpen={isOpen}
+    onClose={onClose}
+    isActive={true}
+    formSwitch={onSigninClick}
+    onSubmit={onSubmit}
+    submitButtonText='Sign in'
+    >
+   </PopupWithForm>
   )
 }
 
-export default SuccessPopup
+export default SuccessPopup;

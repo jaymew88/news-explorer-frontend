@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './PopupWithForm.css';
 
-function PopupWithForm({ isOpen, onClose, onSubmit, name, title, submitButtonText, formSwitch, formSwitchText, children }) {
+function PopupWithForm({ isOpen, onClose, onSubmit, name, title, submitButtonText, isActive, formSwitch, formSwitchText, children }) {
   const isOpenClass = isOpen ? "popup_opened" : "";
 
   return (
@@ -14,17 +14,17 @@ function PopupWithForm({ isOpen, onClose, onSubmit, name, title, submitButtonTex
         onClick={onClose} 
       />
         <form 
-          className="form" 
+          className={`form form_${name}`} 
           action="#" 
           onSubmit={onSubmit}
           noValidate 
         >
-          <h2 className="popup__title">{title}</h2>
+          <h2 className={`popup__title popup__title_${name}`}>{title}</h2>
           {children}
-          <button className="form__submit-btn" type="submit">
+          <button className={`form__submit-btn form__submit-btn_${name} ${isActive ? '' : 'form__submit-btn_inactive'}`} type="submit">
             {submitButtonText}
           </button>
-          <p className="form__switch">or&nbsp; 
+          <p className={`form__switch form__switch_${name}`}>or&nbsp; 
             <Link 
               to="#" 
               className="form__switch-link" 

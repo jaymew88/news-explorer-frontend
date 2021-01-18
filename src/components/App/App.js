@@ -12,11 +12,13 @@ import SavedNewsHeader from '../SavedNewsHeader/SavedNewsHeader';
 import SavedNews from '../SavedNews/SavedNews';
 import SignupForm from '../SignupForm/SignupForm';
 import SigninForm from '../SigninForm/SigninForm';
+import SuccessPopup from '../SuccessPopup/SuccessPopup';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [isSignupFormOpen, setIsSignupFormOpen] = useState(false);
   const [isSigninFormOpen, setIsSigninFormOpen] = useState(false);
+  const [isSuccessOpen, setIsSuccessOpen] = useState(false);
   const [cards, setCards] = useState([
   {
     keyword: 'Nature',
@@ -65,13 +67,22 @@ function App() {
   },
   ]);
 
-  // function handleSignupClick() {
-  //   setIsSignupFormOpen(true);
-  //   window.addEventListener('keyup', handleEscClose);
-  // }
+  function handleSignupSubmit() {
+    console.log("Signup");
+  }
+
+  function handleSigninSubmit() {
+    console.log('Signin');
+  }
+
+  function handleSignupClick() {
+    closeAllPopups();
+    setIsSignupFormOpen(true);
+    window.addEventListener('keyup', handleEscClose);
+  }
 
   function handleSigninClick() {
-    console.log('signin', isSigninFormOpen);
+    closeAllPopups();
     setIsSigninFormOpen(true);
     window.addEventListener('keyup', handleEscClose);
   }
@@ -105,11 +116,22 @@ function App() {
             <Footer />
           </Route>
         </Switch>
-        <SignupForm isOpen={isSignupFormOpen} onClose={closeAllPopups} />
+        <SignupForm 
+          isOpen={isSignupFormOpen} 
+          onClose={closeAllPopups} 
+          onSubmit={handleSignupSubmit}
+          onSigninClick={handleSigninClick}
+        />
         <SigninForm 
           isOpen={isSigninFormOpen} 
           onClose={closeAllPopups} 
-          
+          onSubmit={handleSigninSubmit}
+          onSignupClick={handleSignupClick}
+        />
+        <SuccessPopup 
+          isOpen={isSuccessOpen}
+          onClose={closeAllPopups}
+          onSubmit={handleSigninClick}
         />
       </div>
     </>
