@@ -10,9 +10,13 @@ import About from '../About/About';
 import Footer from '../Footer/Footer';
 import SavedNewsHeader from '../SavedNewsHeader/SavedNewsHeader';
 import SavedNews from '../SavedNews/SavedNews';
+import SignupForm from '../SignupForm/SignupForm';
+import SigninForm from '../SigninForm/SigninForm';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [isSignupFormOpen, setIsSignupFormOpen] = useState(false);
+  const [isSigninFormOpen, setIsSigninFormOpen] = useState(false);
   const [cards, setCards] = useState([
   {
     keyword: 'Nature',
@@ -61,24 +65,52 @@ function App() {
   },
   ]);
 
+  // function handleSignupClick() {
+  //   setIsSignupFormOpen(true);
+  //   window.addEventListener('keyup', handleEscClose);
+  // }
+
+  function handleSigninClick() {
+    console.log('signin', isSigninFormOpen);
+    setIsSigninFormOpen(true);
+    window.addEventListener('keyup', handleEscClose);
+  }
+
+  function handleEscClose(e) {
+    if (e.key === 'Escape') {
+      closeAllPopups()
+    }
+  }
+
+  function closeAllPopups() {
+    window.removeEventListener('keyup', handleEscClose);
+    setIsSignupFormOpen(false);
+    setIsSigninFormOpen(false);
+  }
+
   return (
     <>
       <div className='page'>
         <Switch>
         <Route path='/saved-news'>
-            <SavedNewsHeader loggedIn={true}  />
+            <SavedNewsHeader loggedIn={true} onSigninClick={handleSigninClick} />
             <SavedNews cards={cards} loggedIn={true} />
             <About />
             <Footer />
           </Route>
           <Route path='/'>
-            <Header  />
+            <Header onSigninClick={handleSigninClick} />
             <Main cards={cards} loggedIn={loggedIn} loading={false} results={true} />
             <About />
             <Footer />
           </Route>
-          
         </Switch>
+        <SignupForm isOpen={isSignupFormOpen} onClose={closeAllPopups} />
+        <SigninForm 
+          isOpen={isSigninFormOpen} 
+          onClose={closeAllPopups} 
+          
+        />
       </div>
     </>
   );

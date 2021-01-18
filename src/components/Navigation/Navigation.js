@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './Navigation.css';
 import logout from '../../images/logout.svg';
 
-function Navigation({ isSavedNews, loggedIn }) {
+function Navigation({ isSavedNews, loggedIn, onSigninClick }) {
   const [mobile, SetMobile] = useState(window.innerWidth < 701);
   const [click, setClick] = useState(true);
 
@@ -48,7 +48,7 @@ function Navigation({ isSavedNews, loggedIn }) {
           {loggedIn ?
             <button className="navbar__menu-button" type="button">Logout</button>
            :
-            <button className='navbar__menu-button'>Sign in</button>
+            <button className='navbar__menu-button' type="button" onClick={onSigninClick}>Sign in</button>
           }
          </div>
        </>
@@ -69,9 +69,9 @@ function Navigation({ isSavedNews, loggedIn }) {
               </NavLink>
             }
             {loggedIn ?
-             <button className={`navbar__menu-button ${isSavedNews ? "navbar__menu-button_saved" : ""}`} type="button">Jayme <img className="navbar__logout" src={logout} /></button>
+              <button className={`navbar__menu-button ${isSavedNews ? "navbar__menu-button_saved" : ""}`} type="button">Jayme <img className="navbar__logout" src={logout} /></button>
             :
-              <button className="navbar__menu-button">Sign in</button>
+              <button className="navbar__menu-button" type="button" onClick={onSigninClick}>Sign in</button>
             }
           </div>
        </>
