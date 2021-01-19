@@ -5,7 +5,7 @@
   position: relative;
   z-index: 1;
   box-sizing: border-box;
-  padding: 20px 104px;
+  padding: 0 104px;
   outline: rgba(196,196,196,.3) 1px solid;
 }
 
@@ -19,6 +19,7 @@
   align-items: center;
   text-decoration: none;
   margin: 0;
+  padding: 20px 0;
 }
 
 .navbar__logo_saved {
@@ -43,9 +44,17 @@
   text-decoration: none;
 }
 
+.navbar__menu-item_active {
+  border-bottom: 3px solid #fff;
+}
+
+.navbar__menu-item_saved_active {
+  border-bottom: 3px solid #000;
+}
+
 .navbar__menu-item_saved {
   color: #1A1B22;
-  padding-left: 24px; 
+  margin-left: 24px; 
 }
 
 .navbar__menu-button {
@@ -57,7 +66,7 @@
   border-radius: 100px;
   border: 1px solid #fff;
   padding: 16px 60px;
-  margin-left: 42px;
+  margin: 16px 0 16px 42px;
 }
 
 .navbar__menu-button_saved {
@@ -78,10 +87,11 @@
 
 @media (max-width: 1200px) {
  .navbar {
-  padding: 14px 40px;
+  padding: 0 40px;
  }
  .navbar__logo {
-  font-size: 16px;;
+  font-size: 16px;
+  padding: 14px 0;
  }
  .navbar__menu-item {
    font-size: 16px;
@@ -102,13 +112,14 @@
     justify-content: space-between;
     align-items: center;
     z-index: 3;
-    padding: 16px 16px;
+    padding: 0;
    }
   .navbar__mobile {
     box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
     }
   .navbar__logo {
     display: block;
+    padding: 16px 16px;
   }
   .navbar__overlay {
     background-color: #000;
@@ -147,6 +158,7 @@
     height: 24px;
     border: none;
     display: flex;
+    margin: 16px 16px;
   }
   .navbar__menu-item {
     align-self: flex-start;

@@ -33,15 +33,16 @@ function Navigation({ isSavedNews, loggedIn, onSigninClick }) {
         <div className={`navbar__overlay ${click ? '' : 'navbar__overlay_active'}`}></div>
         <div className={`navbar__menu ${click ? '' : 'navbar__menu_open'}`}>
           <NavLink 
-            to="/Home" 
-            className={`navbar__menu-item ${isSavedNews ? "navbar__menu-item_saved" : ""}`}
+            to="/" 
+            className={`navbar__menu-item ${isSavedNews ? "navbar__menu-item_saved" : ""}`} 
           >
             Home
           </NavLink>
           {loggedIn && 
             <NavLink 
               to="/saved-news" 
-              className={`navbar__menu-item ${isSavedNews ? "navbar__menu-item_saved" : ""}`}>
+              className={`navbar__menu-item ${isSavedNews ? "navbar__menu-item_saved" : ""}`}
+            >  
                 Saved Articles
             </NavLink>
           }
@@ -57,6 +58,7 @@ function Navigation({ isSavedNews, loggedIn, onSigninClick }) {
           <div className={`navbar__menu ${click ? '' : 'navbar__menu-open'}`}>
             <NavLink 
               to="/home" 
+              activeClassName={`navbar__menu-item_active ${isSavedNews ? 'navbar__menu-item_saved_active' : ''}`}
               className={`navbar__menu-item ${isSavedNews ? "navbar__menu-item_saved" : ""}`}
             >
               Home
@@ -64,6 +66,7 @@ function Navigation({ isSavedNews, loggedIn, onSigninClick }) {
             {loggedIn && 
               <NavLink 
                 to="/saved-news" 
+                activeClassName={`navbar__menu-item_active ${isSavedNews ? 'navbar__menu-item_saved_active' : ''}`}
                 className={`navbar__menu-item ${isSavedNews ? "navbar__menu-item_saved" : ""}`}>
                   Saved Articles
               </NavLink>
