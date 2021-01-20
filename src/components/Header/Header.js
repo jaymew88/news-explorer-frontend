@@ -4,7 +4,7 @@ import SearchForm from '../SearchForm/SearchForm';
 import './Header.css';
 
 
-function Header ({ loggedIn, onSigninClick }) {
+function Header ({ loggedIn, onSigninClick,  }) {
 
   return (
     <header className="header">

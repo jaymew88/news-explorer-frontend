@@ -97,6 +97,7 @@ function App() {
     window.removeEventListener('keyup', handleEscClose);
     setIsSignupFormOpen(false);
     setIsSigninFormOpen(false);
+
   }
 
   return (
@@ -110,7 +111,7 @@ function App() {
             <Footer />
           </Route>
           <Route path='/'>
-            <Header onSigninClick={handleSigninClick} />
+            <Header onSigninClick={handleSigninClick} headerClick={handleSigninClick} />
             <Main cards={cards} loggedIn={loggedIn} loading={false} results={true} />
             <About />
             <Footer />

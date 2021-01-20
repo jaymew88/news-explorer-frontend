@@ -20,6 +20,7 @@
   text-decoration: none;
   margin: 0;
   padding: 20px 0;
+  cursor: pointer;
 }
 
 .navbar__logo_saved {
@@ -42,6 +43,7 @@
   font-size: 18px;
   margin: 0 auto;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .navbar__menu-item_active {
@@ -67,6 +69,7 @@
   border: 1px solid #fff;
   padding: 16px 60px;
   margin: 16px 0 16px 42px;
+  cursor: pointer;
 }
 
 .navbar__menu-button_saved {
@@ -188,6 +191,9 @@
   }
   .navbar__icon-open_saved {
     background: url('../../images/menu-black.svg');
+  }
+  .navbar__mobile-menu_hidden {
+    display: none;
   }
 }
 
