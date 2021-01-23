@@ -159,7 +159,7 @@
     z-index: -2;
     opacity: 0;
     transition: .25s ease-in-out;
-    display: nones;
+    display: none;
   }
   .navbar__overlay_active {
     display: flex;

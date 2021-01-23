@@ -42,6 +42,7 @@ function Navigation({ isSavedNews, loggedIn, onSigninClick }) {
         <div className={`navbar__menu ${click ? '' : 'navbar__menu_open'}`}>
           <NavLink 
             to="/" 
+            activeClassName={`navbar__menu-item_active ${isSavedNews ? 'navbar__menu-item_saved_active' : ''}`}
             className={`navbar__menu-item ${isSavedNews ? "navbar__menu-item_saved" : ""}`} 
           >
             Home
@@ -65,7 +66,7 @@ function Navigation({ isSavedNews, loggedIn, onSigninClick }) {
         <>
           <div className={`navbar__menu ${click ? '' : 'navbar__menu-open'}`}>
             <NavLink 
-              to="/home" 
+              to="/" 
               activeClassName={`navbar__menu-item_active ${isSavedNews ? 'navbar__menu-item_saved_active' : ''}`}
               className={`navbar__menu-item ${isSavedNews ? "navbar__menu-item_saved" : ""}`}
             >

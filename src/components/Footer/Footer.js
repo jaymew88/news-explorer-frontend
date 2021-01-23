@@ -13,8 +13,8 @@ function Footer() {
           <li><a className="footer__list-item" href="https://practicum.yandex.com/" target="_blank">Practicum by Yandex</a></li>
         </ul>
         <ul className="footer__links-social">
-          <li><a className="footer__list-item footer__list-icon" href="https://www.facebook.com/YPracticum" target="_blank"><img className="" src={facebook} /></a></li>
-          <li><a className="footer__list-item footer__list-icon" href="https://github.com/jaymew88" target="_blank"><img className="" src={github} /></a></li>
+          <li><a className="footer__list-item footer__list-icon" href="https://www.facebook.com/YPracticum" target="_blank"><img className="" src={facebook} alt="facbook link" /></a></li>
+          <li><a className="footer__list-item footer__list-icon" href="https://github.com/jaymew88" target="_blank"><img className="" src={github} alt="github link" /></a></li>
         </ul>
       </nav>
     </footer>  

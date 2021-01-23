@@ -15,7 +15,9 @@
   }
 }
 
-@media screen and (max-width: 720px) {
+
+
+@media screen and (max-width: 768px) {
   .cards {
     margin: 0 auto;
     padding-bottom: 16px;

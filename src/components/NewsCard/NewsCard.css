@@ -2,7 +2,6 @@
   position: relative;
   background: #fff;
   border-radius: 10px;
-  margin: 8px 8px;
 }
 
 .card__btn {
@@ -20,6 +19,7 @@
   background-image: url('../../images/bookmark.svg');
   border: none;
   z-index: 1;
+  cursor: pointer;
 }
 
 .card__btn:hover {
@@ -91,7 +91,7 @@
 }
 
 .card__title {
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', sans-serif;
   font-size: 26px;
   line-height: 30px;
   color: #1a1b22;
@@ -116,7 +116,7 @@
 }
 
 .card__source {
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', sans-serif;
   font-size: 16px;
   color: #b6bcbf;
   text-transform: uppercase;

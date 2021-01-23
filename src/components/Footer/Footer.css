@@ -60,12 +60,18 @@
   .footer__links-social {
     padding: 0;
   }
+  .footer__list-icon {
+    margin-left: 20px;
+  }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 720px) {
   .footer {
     flex-direction: column-reverse;
     padding: 0 16px 16px;
+  }
+  .footer__title {
+    padding-top: 40px;
   }
   .footer__links-yandex {
     flex-direction: column;
