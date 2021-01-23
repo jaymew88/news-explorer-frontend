@@ -70,17 +70,22 @@ function Navigation({ isSavedNews, loggedIn, onSigninClick }) {
               className={`navbar__menu-item ${isSavedNews ? "navbar__menu-item_saved" : ""}`}
             >
               Home
-            </NavLink>
-            {loggedIn && 
+              </NavLink>
+              {loggedIn && 
               <NavLink 
                 to="/saved-news" 
                 activeClassName={`navbar__menu-item_active ${isSavedNews ? 'navbar__menu-item_saved_active' : ''}`}
-                className={`navbar__menu-item ${isSavedNews ? "navbar__menu-item_saved" : ""}`}>
+                className={`navbar__menu-item navbar__menu-item_loggedin ${isSavedNews ? "navbar__menu-item_saved" : ""}`}>
                   Saved Articles
               </NavLink>
             }
             {loggedIn ?
-              <button className={`navbar__menu-button ${isSavedNews ? "navbar__menu-button_saved" : ""}`} type="button">Jayme <img className="navbar__logout" src={logout} /></button>
+              <button 
+                className={`navbar__menu-button navbar__menu-button_loggedin ${isSavedNews ? "navbar__menu-button_saved" : ""}`} 
+                type="button">Jayme
+                  <img className={`navbar__logout ${isSavedNews ? "navbar__logout_saved" : ""}`} 
+              />
+              </button>
             :
               <button className="navbar__menu-button" type="button" onClick={onSigninClick}>Sign in</button>
             }
