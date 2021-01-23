@@ -150,6 +150,11 @@
   }
   .form {
     height: 100%;
+    padding: 16px 16px 0;
+  }
+  .form__submit-btn {
+    width: 100%;
+    padding: 20px 115px;
   }
   .popup__close-btn {
     top: -39px;
