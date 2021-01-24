@@ -84,7 +84,7 @@ function Navigation({ isSavedNews, loggedIn, onSigninClick }) {
               <button 
                 className={`navbar__menu-button navbar__menu-button_loggedin ${isSavedNews ? "navbar__menu-button_saved" : ""}`} 
                 type="button">Jayme
-                  <img className={`navbar__logout ${isSavedNews ? "navbar__logout_saved" : ""}`} 
+                  <img alt="logout button" className={`navbar__logout ${isSavedNews ? "navbar__logout_saved" : ""}`} 
               />
               </button>
             :
