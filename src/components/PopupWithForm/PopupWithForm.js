@@ -7,24 +7,24 @@ function PopupWithForm({ isOpen, onClose, onSubmit, name, title, submitButtonTex
 
   return (
     <section className={`popup ${isOpenClass}`}>
-      <div className={`popup__container popup__container_${name}`}>
+      <div className={`popup__container popup__container-${name}`}>
       <button 
         type="button" 
         className="popup__close-btn" 
         onClick={onClose} 
       />
         <form 
-          className={`form form_${name}`} 
+          className={`form form-${name}`} 
           action="#" 
           onSubmit={onSubmit}
           noValidate 
         >
-          <h2 className={`popup__title popup__title_${name}`}>{title}</h2>
+          <h2 className={`popup__title popup__title-${name}`}>{title}</h2>
           {children}
-          <button className={`form__submit-btn form__submit-btn_${name} ${isActive ? '' : 'form__submit-btn_inactive'}`} type="submit">
+          <button className={`form__submit-btn form__submit-btn-${name} ${isActive ? '' : 'form__submit-btn-inactive'}`} type="submit">
             {submitButtonText}
           </button>
-          <p className={`form__switch form__switch_${name}`}>or&nbsp; 
+          <p className={`form__switch form__switch-${name}`}>or&nbsp; 
             <Link 
               to="#" 
               className="form__switch-link" 

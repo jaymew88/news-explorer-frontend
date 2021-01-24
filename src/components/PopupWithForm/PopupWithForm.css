@@ -39,7 +39,8 @@
 .popup__title {
   color: #1A1B22;
   font-family: 'Roboto', sans-serif;
-  font-size: 26px;
+  font-size: 24px;
+  line-height: 28px;
   font-weight: 900;
   margin: 0 0 24px;
 }
@@ -104,12 +105,12 @@
   margin: 30px auto 18px;
 }
 
-.form__submit-btn_inactive {
+.form__submit-btn-inactive {
   color: #B6BCBF;
   background-color: #E6E8EB;
 }
 
-.form__submit-btn_success {
+.form__submit-btn-success {
   background: none;
   color: #2F71E5;
   font-family: 'Inter', sans-serif;
@@ -128,7 +129,7 @@
   margin: 0;
 }
 
-.form__switch_success {
+.form__switch-success {
   display: none;
 }
 

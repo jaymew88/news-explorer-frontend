@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navigation.css';
-import logout from '../../images/logout.svg';
 
 function Navigation({ isSavedNews, loggedIn, onSigninClick }) {
   const [mobile, setMobile] = useState(window.innerWidth < 701);
   const [click, setClick] = useState(true);
-  // const [isOpenSigninOpen, setIsSigninOpen] = useState(false);
+  const [isSigninOpen, setIsSigninOpen] = useState(false);
 
   const updateMedia = () => {
     setMobile(window.innerWidth < 701);
@@ -22,27 +21,25 @@ function Navigation({ isSavedNews, loggedIn, onSigninClick }) {
   };
 
   const mobileMenuClick = () => {
-    onSigninClick();
     toggleMobileMenu();
+    onSigninClick();
+    setIsSigninOpen(!isSigninOpen);
   }
  
   return (
     <nav className={`navbar ${click ? '' : 'navbar__mobile'}`}>
       <NavLink to="/" className={`navbar__logo ${(isSavedNews && click) ? "navbar__logo_saved" : ""}`}>NewsExplorer</NavLink>
       {mobile ? (
-       <> 
-     
+        <> 
           <button 
             className={`navbar__mobile-menu ${click ? (isSavedNews ? 'navbar__icon-open_saved' : 'navbar__icon-open') : 'navbar__icon-close'}`} 
             onClick={toggleMobileMenu}
             type="button" 
-          />
-        
+          />    
         <div className={`navbar__overlay ${click ? '' : 'navbar__overlay_active'}`}></div>
         <div className={`navbar__menu ${click ? '' : 'navbar__menu_open'}`}>
           <NavLink 
             to="/" 
-            // activeClassName={`navbar__menu-item_active ${isSavedNews ? 'navbar__menu-item_saved_active' : ''}`}
             className={`navbar__menu-item ${isSavedNews ? "navbar__menu-item_saved" : ""}`} 
           >
             Home
@@ -61,7 +58,7 @@ function Navigation({ isSavedNews, loggedIn, onSigninClick }) {
             <button className='navbar__menu-button' type="button" onClick={mobileMenuClick}>Sign in</button>
           }
          </div>
-       </>
+        </>
       ) : (
         <>
           <div className={`navbar__menu ${click ? '' : 'navbar__menu-open'}`}>
@@ -71,8 +68,8 @@ function Navigation({ isSavedNews, loggedIn, onSigninClick }) {
               className={`navbar__menu-item ${isSavedNews ? "navbar__menu-item_saved" : ""}`}
             >
               Home
-              </NavLink>
-              {loggedIn && 
+            </NavLink>
+            {loggedIn && 
               <NavLink 
                 to="/saved-news" 
                 activeClassName={`navbar__menu-item_active ${isSavedNews ? 'navbar__menu-item_saved_active' : ''}`}

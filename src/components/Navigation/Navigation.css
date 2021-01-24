@@ -97,7 +97,7 @@
   color: #1A1B22;
   border: 1px solid #1A1B22;
   border-radius: 100px;
-  padding: 13px 16px;
+  padding: 14px 16px;
   align-content: center;
 }
 
@@ -225,9 +225,6 @@
   }
   .navbar__icon-open_saved {
     background: url('../../images/menu-black.svg');
-  }
-  .navbar__mobile-menu_hidden {
-    display: none;
   }
 }
 

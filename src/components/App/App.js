@@ -67,12 +67,15 @@ function App() {
   },
   ]);
 
-  function handleSignupSubmit() {
-    console.log("Signup");
+  function handleSignupSubmit(e) {
+    e.preventDefault();
+    setIsSignupFormOpen(false);
+    setIsSuccessOpen(true);
   }
 
   function handleSigninSubmit() {
-    console.log('Signin');
+    setLoggedIn(true);
+    setIsSigninFormOpen(false);
   }
 
   function handleSignupClick() {
@@ -97,7 +100,7 @@ function App() {
     window.removeEventListener('keyup', handleEscClose);
     setIsSignupFormOpen(false);
     setIsSigninFormOpen(false);
-
+    setIsSuccessOpen(false);
   }
 
   return (
@@ -105,13 +108,13 @@ function App() {
       <div className='page'>
         <Switch>
         <Route path='/saved-news'>
-            <SavedNewsHeader loggedIn={true} onSigninClick={handleSigninClick} />
-            <SavedNews cards={cards} loggedIn={true} />
+            <SavedNewsHeader loggedIn={loggedIn} onSigninClick={handleSigninClick} />
+            <SavedNews cards={cards} loggedIn={loggedIn} />
             <About />
             <Footer />
           </Route>
           <Route path='/'>
-            <Header onSigninClick={handleSigninClick} headerClick={handleSigninClick} />
+            <Header loggedIn={loggedIn} onSigninClick={handleSigninClick} headerClick={handleSigninClick} />
             <Main cards={cards} loggedIn={loggedIn} loading={false} results={true} />
             <About />
             <Footer />
