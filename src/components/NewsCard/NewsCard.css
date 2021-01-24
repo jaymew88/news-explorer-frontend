@@ -97,8 +97,8 @@
   line-height: 30px;
   height: 60px;
   color: #1a1b22;
-  padding: 0 24px 16px;
-  margin: 0;
+  margin: 0 24px 16px;
+ 
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -154,13 +154,15 @@
   }
   .card__title {
     font-size: 22px;
-    padding-left: 16px;
+    margin-left: 16px;
+    line-height: 24px;
     height: 72px;
     -webkit-line-clamp: 3;
   }
   .card__text{
     margin: 10px 18px 12px;
     height: 88px;
+    -webkit-line-clamp: 4;
   }
   .card__source{
     margin: 0 18px 16px;
@@ -177,6 +179,10 @@
   }
   .card__img {
     height: 196px;
+  }
+  .card__title {
+    height: 48px;
+    -webkit-line-clamp: 2;
   }
   .card__btn {
     top: 16px;

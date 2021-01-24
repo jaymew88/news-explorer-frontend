@@ -42,7 +42,7 @@ function Navigation({ isSavedNews, loggedIn, onSigninClick }) {
         <div className={`navbar__menu ${click ? '' : 'navbar__menu_open'}`}>
           <NavLink 
             to="/" 
-            activeClassName={`navbar__menu-item_active ${isSavedNews ? 'navbar__menu-item_saved_active' : ''}`}
+            // activeClassName={`navbar__menu-item_active ${isSavedNews ? 'navbar__menu-item_saved_active' : ''}`}
             className={`navbar__menu-item ${isSavedNews ? "navbar__menu-item_saved" : ""}`} 
           >
             Home
@@ -67,7 +67,7 @@ function Navigation({ isSavedNews, loggedIn, onSigninClick }) {
           <div className={`navbar__menu ${click ? '' : 'navbar__menu-open'}`}>
             <NavLink 
               to="/" 
-              activeClassName={`navbar__menu-item_active ${isSavedNews ? 'navbar__menu-item_saved_active' : ''}`}
+              activeClassName={`navbar__menu-item_active ${!isSavedNews ? 'navbar__menu-item_active' : ''}`}
               className={`navbar__menu-item ${isSavedNews ? "navbar__menu-item_saved" : ""}`}
             >
               Home
@@ -81,11 +81,9 @@ function Navigation({ isSavedNews, loggedIn, onSigninClick }) {
               </NavLink>
             }
             {loggedIn ?
-              <button 
-                className={`navbar__menu-button navbar__menu-button_loggedin ${isSavedNews ? "navbar__menu-button_saved" : ""}`} 
-                type="button">Jayme
-                  <img alt="logout button" className={`navbar__logout ${isSavedNews ? "navbar__logout_saved" : ""}`} 
-              />
+              <button className={`navbar__menu-button navbar__menu-button_loggedin ${isSavedNews ? "navbar__menu-button_saved" : ""}`} type="button">
+                <p className="navbar__user">Jayme</p>
+                <div className={`navbar__logout ${isSavedNews ? "navbar__logout_saved" : ""}`}></div>
               </button>
             :
               <button className="navbar__menu-button" type="button" onClick={onSigninClick}>Sign in</button>
