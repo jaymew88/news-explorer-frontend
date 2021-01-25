@@ -1,0 +1,16 @@
+.saved-news {
+  background: #F5F6F7;
+  padding: 62px 104px;
+}
+
+@media screen and (max-width: 1200px) {
+  .saved-news {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .saved-news {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,231 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 0 104px;
+  outline: rgba(196,196,196,.3) 1px solid;
+}
+
+.navbar__logo {
+  color: #fff;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin: 0;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.navbar__logo_saved {
+  color: #1A1B22;
+}
+
+.navbar__menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar__menu-item {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0 auto;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar__menu-item_loggedin {
+  margin-left: 24px;
+}
+
+.navbar__menu-item_active {
+  border-bottom: 3px solid #fff;
+}
+
+.navbar__menu-item_saved_active {
+  border-bottom: 3px solid #000;
+}
+
+.navbar__menu-item_saved {
+  color: #1A1B22;
+  margin-left: 24px; 
+}
+
+.navbar__menu-button {
+  background-color: rgba(196, 196, 196, 0.01);
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 100px;
+  border: 1px solid #fff;
+  padding: 16px 60px;
+  margin: 16px 0 16px 42px;
+  cursor: pointer;
+}
+
+.navbar__menu-button_loggedin  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 112px;
+  padding: 13px 16px;
+  align-content: center;
+}
+
+.navbar__user {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding-right: 20px;
+  margin: 0;
+}
+
+.navbar__menu-button_saved {
+  color: #1A1B22;
+  border: 1px solid #1A1B22;
+  border-radius: 100px;
+  padding: 14px 16px;
+  align-content: center;
+}
+
+.navbar__logout {
+  padding-left: 20px;
+  background-image: url(../../images/logout-white.svg);
+  background-repeat: no-repeat;
+  height: 16px;
+}
+
+.navbar__logout_saved {
+  background-image: url('../../images/logout.svg');
+  background-repeat: no-repeat;
+  height: 16px;
+}
+
+.navbar__mobile-menu {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+ .navbar {
+  padding: 0 40px;
+ }
+ .navbar__logo {
+  font-size: 16px;
+  padding: 14px 0;
+ }
+ .navbar__menu-item {
+   font-size: 16px;
+ }
+ .navbar__menu-button {
+    padding: 10px 50px;
+    margin-left: 16px;
+ }
+ .navbar__menu-button_loggedin {
+   padding: 13px 16px;
+ }
+ .navbar__menu-button_saved {
+   padding: 13px 16px;
+ }
+}
+
+ @media screen and (max-width: 700px) {
+  .navbar { 
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    padding: 0;
+   }
+  .navbar__mobile {
+    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+    }
+  .navbar__logo {
+    display: block;
+    padding: 16px 16px;
+  }
+  .navbar__overlay {
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0;
+    transition: .25s ease-in-out;
+    display: none;
+  }
+  .navbar__overlay_active {
+    display: flex;
+    opacity: .5;
+  }
+  .navbar__menu {
+    background: #1A1B22;
+    position: absolute;
+    top: -500px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+    height: 286px;
+    padding: 100px 0 24px;
+    transition: .25s ease-in-out;
+  }
+  .navbar__menu_open {
+    top: 0px;
+    opacity: 1;
+  }
+  .navbar__mobile-menu {
+    width: 24px;
+    height: 24px;
+    border: none;
+    display: flex;
+    margin: 16px 16px;
+  }
+  .navbar__menu-item {
+    align-self: flex-start;
+    color: #fff;
+    margin: 0 0 0 16px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 56px;
+  }
+  .navbar__menu-button {
+    max-width: 400px;
+    align-self: center;
+    margin: 0;
+    padding: 16px 100px;
+  }
+  .navbar__icon-open {
+    background: url('../../images/menu.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(196, 196, 196, 0.01);
+  }
+  .navbar__icon-close {
+    background: url('../../images/x.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(196, 196, 196, 0.01);
+  }
+  .navbar__icon-open_saved {
+    background: url('../../images/menu-black.svg');
+  }
+}
+
+
